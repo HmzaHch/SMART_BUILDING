@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# Smart Building 3D — WebGL Digital Twin & Real-Time IoT Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Framework](https://img.shields.io/badge/Frontend-React%2019-blue.svg?style=flat-square)](https://react.dev/)
+[![3D Engine](https://img.shields.io/badge/3D%20Engine-Three.js%20%2F%20R3F-black.svg?style=flat-square)](https://r3f.docs.pmnd.rs/)
+[![Cloud DB](https://img.shields.io/badge/Cloud%20DB-Supabase%20Realtime-3ECF8E.svg?style=flat-square)](https://supabase.com/)
+[![Telemetry](https://img.shields.io/badge/Charts-Recharts-teal.svg?style=flat-square)](https://recharts.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](LICENSE)
 
-## Available Scripts
+An interactive, browser-based **3D Digital Twin** application for smart facility monitoring, spatial sensor telemetry visualization, and energy efficiency analytics. Powered by **React Three Fiber (Three.js)** and **Supabase Realtime**, the platform translates physical sensor streams into an intuitive virtual building interface.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🌟 Key Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Interactive 3D Spatial Twin:** Orbit, pan, zoom, and inspect rooms and building zones rendered with Three.js WebGL shaders and realistic lighting.
+- **Real-Time IoT State Synchronization:** Subscribes to Supabase Realtime event channels to display live human presence, environmental parameters, and actuator statuses.
+- **Interactive Telemetry Dashboards:** Integrated analytical charts (Recharts) displaying historical consumption, temperature trends, and peak activity zones.
+- **Zone Inspection & Spatial Alerts:** Visual color-coded alerts overlaid directly onto 3D building components when sensor thresholds or security tripwires are triggered.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🛠️ Architecture & Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```text
+[ Physical IoT Nodes / ESP32 Sensors ]
+                │
+                ▼ (MQTT / HTTP REST API)
+    [ Supabase Cloud Database ]
+                │ (Realtime WebSockets Subscription)
+                ▼
+  [ React Three Fiber 3D Dashboard ]
+        ├── Three.js WebGL Scene (`@react-three/fiber`, `@react-three/drei`)
+        ├── Live Telemetry Widgets (Recharts)
+        └── Interactive Zone Selector & Anomaly Highlights
+```
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 1. Prerequisites
+- [Node.js](https://nodejs.org/) (version 18+ recommended)
+- `npm` or `yarn`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 2. Installation
+Clone the repository:
+```bash
+git clone https://github.com/HmzaHch/SMART_BUILDING.git
+cd SMART_BUILDING
+```
 
-### `npm run eject`
+Install packages:
+```bash
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 3. Launch Development Server
+```bash
+npm start
+```
+The application will launch automatically at [http://localhost:3000](http://localhost:3000).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 4. Production Build
+```bash
+npm run build
+```
+Generates an optimized static bundle in the `build/` folder ready for deployment on Vercel, Netlify, or AWS S3/CloudFront.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 👨‍💻 Author
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Hamza HACHOUM**  
+*State Engineer in Applied Sciences and Technology (Embedded Systems & IoT)*  
+*ISIMG, University of Gabès*  
+- **LinkedIn:** [hamza-hachoum-186319227](https://www.linkedin.com/in/hamza-hachoum-186319227)  
+- **GitHub:** [@HmzaHch](https://github.com/HmzaHch)  
+- **Email:** hamza.hachoum@gmail.com
